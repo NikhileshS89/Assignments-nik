@@ -82,12 +82,14 @@ sudo ip netns exec host3 ip addr add 192.168.10.13/24 dev veth3h
 
 ```
 
-5. Test connectivity:
+5. Test connectivity and check bridge status:
 
 ```
 
 sudo ip netns exec host1 ping -c 3 192.168.10.12
 sudo ip netns exec host2 ping -c 3 192.168.10.13
+brctl show
+
 
 ```
 
